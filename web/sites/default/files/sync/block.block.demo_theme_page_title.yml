@@ -1,0 +1,20 @@
+uuid: 7d5b7cdc-67ef-4cf1-90f7-31720df277c7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - demo_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: demo_theme_page_title
+theme: demo_theme
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

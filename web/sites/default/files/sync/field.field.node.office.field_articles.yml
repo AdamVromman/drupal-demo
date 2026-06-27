@@ -1,0 +1,29 @@
+uuid: aa40fe3f-bf89-4cf0-810b-bcb0d1e18793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_articles
+    - node.type.article
+    - node.type.office
+id: node.office.field_articles
+field_name: field_articles
+entity_type: node
+bundle: office
+label: Articles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: changed
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,79 @@
+uuid: 94a8759c-24ff-423f-b229-e4c4f2431754
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.field_header_image
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          18e78f0c-501f-4565-8658-114c15d7c2b9:
+            uuid: 18e78f0c-501f-4565-8658-114c15d7c2b9
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ef828b71-3a04-4c90-b491-8e576eb14365:
+            uuid: ef828b71-3a04-4c90-b491-8e576eb14365
+            region: content
+            configuration:
+              id: 'extra_field_block:node:article:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          64198361-51b4-4140-8a07-5c7cec2220ad:
+            uuid: 64198361-51b4-4140-8a07-5c7cec2220ad
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_header_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content: {  }
+hidden:
+  field_tags: true
+  links: true
+  field_header_image: true

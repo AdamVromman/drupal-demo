@@ -1,0 +1,23 @@
+uuid: 12bd2d1c-199d-4ec4-8e95-f53049263ffc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_image
+    - field.storage.block_content.field_image_top_mobile
+id: block_content.text_image.field_image_top_mobile
+field_name: field_image_top_mobile
+entity_type: block_content
+bundle: text_image
+label: 'Image top (mobile)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

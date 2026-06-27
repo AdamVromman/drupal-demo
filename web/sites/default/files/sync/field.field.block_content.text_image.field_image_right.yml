@@ -1,0 +1,23 @@
+uuid: 7c510e4d-a7bc-462c-b894-2d2049761e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_image
+    - field.storage.block_content.field_image_right
+id: block_content.text_image.field_image_right
+field_name: field_image_right
+entity_type: block_content
+bundle: text_image
+label: 'Image right (desktop)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

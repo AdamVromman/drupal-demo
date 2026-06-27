@@ -1,0 +1,19 @@
+uuid: e35c60c5-4845-47f2-979d-45f2b5d10a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_person_first_name
+    - node.type.office
+id: node.office.field_contact_person_first_name
+field_name: field_contact_person_first_name
+entity_type: node
+bundle: office
+label: 'Contact person first name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -2,7 +2,7 @@
 /web/sites/*/*settings*.php
 /web/sites/*/*services*.yml
 
-/web/sites/*/files
+/web/sites/*/files/**
 /web/sites/*/public
 /web/sites/*/private
 /web/sites/*/files-public
