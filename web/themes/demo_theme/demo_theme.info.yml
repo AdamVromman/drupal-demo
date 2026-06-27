@@ -1,0 +1,12 @@
+name: Demo Theme
+type: theme
+description: "A custom theme I am creating specifically for this demo."
+core_version_requirement: ">=11.0"
+libraries:
+  - demo_theme/global-styling
+base theme: stable9
+regions:
+  header: "Header"
+  content: "Content"
+  sidebar_first: "Sidebar first"
+  footer: "Footer"
