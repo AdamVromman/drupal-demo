@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Demo_theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_node().
+ */
+// function demo_theme_preprocess_node(array &$variables) {
+//   /** @var \Drupal\node\NodeInterface $node */
+//   $node = $variables['node'];
+
+//   if ($node->bundle() === 'news' && $node->hasField('field_header_image') && !$node->get('field_header_image')->isEmpty()) {
+//     $variables['header_image'] = $node->get('field_header_image')->view('default');
+//   }
+// }
+
+function demo_theme_preprocess_node(array &$variables) {
+
+  $node = $variables['node'];
+
+  if ($node->hasField('field_header_image') && !$node->get('field_header_image')->isEmpty()) {
+    $variables['header_image'] = $node->get('field_header_image')->view('teaser');
+  }
+
+  if ($node->hasField('field_description') && !$node->get('field_description')->isEmpty()) {
+    $variables['description'] = $node->get('field_description')->view('teaser');
+  }
+
+}

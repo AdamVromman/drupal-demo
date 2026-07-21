@@ -3,4 +3,175 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+header div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: between;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: between;
+  align-items: center;
+  gap: 4rem;
+}
+header nav ul li a {
+  text-decoration: none;
+}
+
+.node {
+  position: relative;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #F5F4F6;
+  height: 100%;
+  width: 100%;
+}
+.node--title {
+  position: relative;
+  margin: 0;
+}
+.node--content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+}
+.node--description p {
+  margin: 0;
+}
+.node--image {
+  inset: 0;
+  aspect-ratio: 16/8;
+  width: 100%;
+  height: auto;
+}
+.node--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.views-view-responsive-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .views-view-responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .views-view-responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .views-view-responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.views-view-responsive-grid__item-inner {
+  height: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

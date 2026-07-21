@@ -1,0 +1,25 @@
+@use "_variables.scss";
+
+.views-view-responsive-grid {
+  display: grid;
+  gap: variables.$margin-lg;
+  grid-template-columns: 1fr;
+
+  @include variables.responsive("sm") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include variables.responsive("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include variables.responsive("lg") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    &-inner {
+      height: 100%;
+    }
+  }
+}

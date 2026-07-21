@@ -1,0 +1,27 @@
+header {
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: between;
+    align-items: center;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row;
+      justify-content: between;
+      align-items: center;
+      gap: 4rem;
+
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
